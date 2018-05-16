@@ -1,0 +1,85 @@
+<html>
+<head>
+<script type="text/javascript" src = "../assets/js/jquery-3.3.1.min.js"></script>
+<link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png"/>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="../assets/js/bootstrap.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
+<title>SearchEngine</title>
+</head>
+
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <img src = "../assets/images/logo.png" class="navbar-brand" width="128" height="428">
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+            <li><a href="/"><strong>Home</strong></a></li>
+          </ul>
+        </li>
+      </ul>
+      
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container- fluid -->
+</nav>
+
+<!--Pulling Awesome Font -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="container">
+    <div class="row">
+        <div>
+            <div class="head">
+            <span style="white-space:nowrap;"><h3>Type in a Profession with a City name</h3></span>
+            <div class="container">
+              <div class="row">
+                       <div id="custom-search-input">
+                                        <div class="input-group col-md-12">
+                                            <input type="text" class="search-query form-control" id = "query" placeholder="Search" />
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-danger" type="button">
+                                                    <span class=" glyphicon glyphicon-search"></span>
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </div>
+              </div>
+            </div>
+            </br>
+            <div class="wrapper">
+            <span class="group-btn">     
+                <button class="btn btn-primary btn-md" id="goBtn">Search</button>
+            </span>
+            </div>
+            </div>
+        
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+  $('button#goBtn').on('click', function(){
+    var query = $('input#query').val();
+    window.location.replace('/results/' + query);
+  });
+</script>
+</body>
+</html>

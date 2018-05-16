@@ -1,0 +1,60 @@
+<html>
+<head>
+<script type="text/javascript" src = "../assets/js/jquery-3.3.1.min.js"></script>
+<link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png"/>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="../assets/js/bootstrap.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+<title>Result</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-default" background-color="teal">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4K6Ei_PagqXCuLZF4ONcnzvghbAW2xfvTnEQ1tCJc51iEYvWg" class="navbar-brand" width="128" height="428">
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          
+              <li><a href="/"><strong>Home</strong></a></li>
+            </ul>
+          </li>
+        </ul>
+        
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container- fluid -->
+  </nav>
+
+<h4>Results</h4>
+<table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th>Location</th> 
+    <th>Title</th>
+    <th>Company</th>
+  </tr>
+{% for d in data %}
+  <tr>
+    <td>{{d[0]}}</td>
+    <td>{{d[1]}}</td> 
+    <td>{{d[2]}}</td>
+    <td>{{d[3]}}</td>
+  </tr>
+{% endfor %}
+</table>
+</body>
+</html>
